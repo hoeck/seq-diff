@@ -1,0 +1,10 @@
+Simple Longest Common Subsequence implementation in plain clojure (1.2).
+
+See: http://en.wikipedia.org/wiki/Longest_common_subsequence_problem
+
+Example:
+
+(require '[hoeck.diff.lcs :as lcs])
+
+(lcs/vec-diff [:a :b :c] [:a 1 2 :b :x])
+[[nil :a] [:new 1] [:new 2] [nil :b] [:old :c] [:new :x]]
