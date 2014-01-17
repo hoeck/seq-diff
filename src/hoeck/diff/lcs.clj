@@ -19,7 +19,7 @@
   [s t & {:keys [compare] :or {compare =}}]
   (let [rows (inc (count s))
         cols (inc (count t))
-        a (make-array Integer rows cols )]
+        a (make-array Long rows cols )]
     (doseq [r (range rows)] (aset a r 0 0))
     (doseq [c (range cols)] (aset a 0 c 0))
     (doseq [i (range 1 rows)]
